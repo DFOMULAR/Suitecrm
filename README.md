@@ -2,7 +2,7 @@
 
 ## 1. :notebook: Getting started
 
-Visit [this](https://suitecrm.com/download/) page to get the latest version of the SuiteCRM, This project setup uses version 7.x, copy the download link of the file and use `wget [link]` as described in the next section.
+Visit [this](https://suitecrm.com/download/) page to get the latest version of SuiteCRM, This project setup uses version 7.x, copy the download link of the file and use `wget [link]` as described in the next section to download the application setup file.
 
 :pushpin: Note: Any other major version may fail with this setup, to use version 8.x, update the php version in the Dockerfile to meet with requirement specified.
 
