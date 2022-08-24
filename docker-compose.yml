@@ -5,9 +5,12 @@ services:
       context: .
       dockerfile: .docker/Dockerfile
     image: suitecrm-instance
-    container_name: suitecrm-obj
+    container_name: suitecrm
     ports: 
-      - 80:80
+      - 5000:80 # 80:80
+    links:
+      - db
+
   db:
     image: mysql
     container_name: mysql-suitecrm
@@ -17,8 +20,20 @@ services:
       MYSQL_USER: suitecrm-user
       MYSQL_PASSWORD: root@scm
     ports: 
-      - 3306:3306
+      - 5001:3306 # 3306:3306
     volumes: 
       - mysql-data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin:5.1-apache
+    container_name: pma
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    ports:
+      - 5002:80
 volumes: 
   mysql-data:
