@@ -20,7 +20,7 @@ env:
   IBM_CLOUD_REGION: us-south
   ICR_NAMESPACE: ${{ secrets.ICR_NAMESPACE }}
   REGISTRY_HOSTNAME: us.icr.io
-  IMAGE_NAME: iks-test
+  IMAGE_NAME: SuiteCrm
   IKS_CLUSTER: cbkg2ucf0pr9k69au7ag
   DEPLOYMENT_NAME: iks-test
   PORT: 5001
